@@ -1,33 +1,36 @@
 <template>
-  <div class="nav">
-    <div class="icon">
-        <img src="../assets/logo.png">
-    </div>
-    <div class="logo-part-1 logo-style">
-      <p>Looking</p>
-      <p>Feeling</p>
-    </div>
-    <div class="logo-part-2 logo-style">
-      <p class="good">Good</p>
-    </div>
-    <img src="../assets/menu.png" class="mobile-nav-icon" @click="openMobileNav()">
-    <div class="mobile-nav_items">
-      <p class="close" @click="closeMobileNav()">X</p>
-      <router-link to="/about">קצת עלינו</router-link>
-      <router-link to="/">הצוות שלנו</router-link> 
-      <router-link to="/about">אימונים</router-link>
-      <router-link to="/">מערכת שעות</router-link> 
-      <router-link to="/about">צור קשר</router-link>
-    </div>
-    <div class="nav_items">
-      <router-link to="/about">קצת עלינו</router-link>
-      <router-link to="/">הצוות שלנו</router-link> 
-      <router-link to="/about">אימונים</router-link>
-      <router-link to="/">מערכת שעות</router-link> 
-      <router-link to="/about">צור קשר</router-link>
-    </div>
-    <router-view />
-  </div>
+ 
+    <div class="nav">
+      <div class="icon">
+          <img src="../assets/logo.png">
+      </div>
+      <div class="logo-part-1 logo-style">
+        <p>Looking</p>
+        <p>Feeling</p>
+      </div>
+      <div class="logo-part-2 logo-style">
+        <p class="good">Good</p>
+      </div>
+      <img src="../assets/menu.png" class="mobile-nav-icon" @click="openMobileNav()">
+      <div class="mobile-nav_items">
+        <p class="close" @click="closeMobileNav()">X</p>
+        <router-link to="/about">קצת עלינו</router-link>
+        <router-link to="/">הצוות שלנו</router-link> 
+        <router-link to="/about">אימונים</router-link>
+        <router-link to="/">מערכת שעות</router-link> 
+        <router-link to="/about">צור קשר</router-link>
+      </div>
+      <div class="nav_items">
+        <router-link to="/about">קצת עלינו</router-link>
+        <router-link to="/">הצוות שלנו</router-link> 
+        <router-link to="/about">אימונים</router-link>
+        <router-link to="/">מערכת שעות</router-link> 
+        <router-link to="/about">צור קשר</router-link>
+      </div>
+      <div></div>
+      <router-view />
+    </div> 
+ 
 </template>
 
 <script>

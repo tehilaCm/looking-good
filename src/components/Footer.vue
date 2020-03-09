@@ -85,7 +85,7 @@ export default {
       display: grid;
       grid-template-columns: 50% 50%;
     }
-    
+
     .details{
       display: grid;
       grid-template-rows: 40px 40px 40px;
