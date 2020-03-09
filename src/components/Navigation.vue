@@ -1,6 +1,5 @@
 <template>
   <div class="nav">
-    
     <div class="icon">
         <img src="../assets/logo.png">
     </div>
@@ -37,23 +36,22 @@ export default {
   methods: {
     openMobileNav: function(){
       let mobileNavItems = document.querySelector(".mobile-nav_items");
-      let mobileNavIcon = document.querySelector(".mobile-nav_icon");
+      let mobileNavIcon = document.querySelector(".mobile-nav-icon");
       mobileNavItems.style.opacity = "1"; 
       mobileNavItems.style.trasform = "translateY(0)";
       mobileNavItems.style.zIndex = "2"; 
-            mobileNavIcon.style.visibility = "hidden"
-
+      mobileNavIcon.style.visibility = "hidden"
     },
      closeMobileNav: function(){
       let mobileNavItems = document.querySelector(".mobile-nav_items");
-      let mobileNavIcon = document.querySelector(".mobile-nav_icon");
+      let mobileNavIcon = document.querySelector(".mobile-nav-icon");
       mobileNavItems.style.opacity = "0"; 
       mobileNavItems.style.zIndex = "-1"; 
-            mobileNavIcon.style.visibility = "visible"
+      mobileNavIcon.style.visibility = "visible"
 
-      setTimeout(()=>{ mobileNavItems.style.zIndex = "-1"; 
-},1000);
-
+      setTimeout(()=>{ 
+        mobileNavItems.style.zIndex = "-1"; 
+      },1000);
     }
   }
 }
@@ -116,7 +114,7 @@ export default {
     width: 2rem;
     height: 2rem;
     right: 1rem;
-    margin: 1rem;
+    margin: 1.7rem 0rem;
     position: absolute;
     cursor: pointer;
   }
@@ -158,7 +156,8 @@ export default {
   }
  
   img{
-    width: 5rem;
+    width: 4rem;
+    margin-top: 0.5rem;
   }
 
 @media (min-width: 51rem)
@@ -190,7 +189,7 @@ export default {
   }
 
   .mobile-nav-icon{
-    visibility: hidden;
+    display: none;
   }
 
 .logo-part-1{
@@ -207,5 +206,4 @@ export default {
     margin-right: 0;
   }
 }
-
 </style>

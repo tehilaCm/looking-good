@@ -1,17 +1,19 @@
 <template>
   <div id="app"> 
-      <Navigation></Navigation>
-  
-     
+    <Navigation></Navigation>
+    <div style="height: 30rem"></div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
   import Navigation from "@/components/Navigation.vue";
+  import Footer from "@/components/Footer.vue";
     export default {
     name: "App",
     components: {
-      Navigation
+      Navigation, 
+      Footer
     }
   }
 </script>
