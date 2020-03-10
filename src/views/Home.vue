@@ -24,9 +24,13 @@
         הוקם על-פי חזונה של שירן גרין. אשר החליטה להקים מועדון הקשוב לצרכים של המתעמלים, מועדון מכוון מקצועיות חסרת פשרות, שרות מעולה ואוירה חברית
       </p>
     </div>
+    
     <div class="curses">
       <hr>
       <h1>קורסים</h1>
+      <Curse v-for="curse in curses" :name="curse.name" :img="curse.img" :key.sync="curse.id">
+      </Curse>
+      <!-- כפתור שאר קורסים -->
     </div>
     <Footer></Footer>
   </div>
@@ -35,6 +39,7 @@
 <script>
 
 import Slider from "@/components/Slider.vue";
+import Curse from "@/components/Curse.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -42,9 +47,47 @@ export default {
   name: "Home",
   components: {
     Slider,
+    Curse,
     Footer      
-  }
+  }, 
+   data(){
+    return{
+          curses: [
+          {
+              id: "1",
+              img: "https://spt-fitness.co.il/wp-content/uploads/2017/12/pilates2.jpg",
+              name: "פילאטיס מזרן"
+          },
+          {
+              id: "2",
+              img: "https://lh3.googleusercontent.com/proxy/ItNuMrCtUFcn-8lQcqCgW8x_j4lb46opDbg0RKda5498lGZU0EiBinbE8qEVCyuenw564izI_oFCKvn_pSsj2j0uSE02hHaYDDqvvnk2FJyuV0Qg",
+              name: "זומבה"
+          },
+          {
+              id: "3",
+              img: "https://media.self.com/photos/57d88992f71ce8751f6b48f1/master/w_1600%2Cc_limit/plank.jpg",
+              name: "עיצוב הגוף"
+          },
+          {
+              id: "4",
+              img: "https://thumbs.dreamstime.com/b/trampoline-training-street-sports-performances-outdoor-fitness-training-trampoline-training-street-orenburg-russia-156962126.jpg",
+              name: "טרמפולינה"
+          },
+          {
+              id: "5",
+              img: "https://sfilev2.f-static.com/image/users/440514/ftp/my_files/4-1.jpg",
+              name: "קיקבוקס"
+          },
+          {
+              id: "6",
+              img: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/16/15/weightlifting-champions-picture-id519275554-1.jpg",
+              name: "בודי פאוור"
+          }
+        ]
+      }
+    }
 };
+
 </script>
 
 <style scoped>

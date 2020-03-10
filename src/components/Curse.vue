@@ -1,10 +1,10 @@
 <template>
     <div class="curse">
         <div class="curse-img">
-            <img :src="image-src">
+            <img :src="img">
         </div>
         <p class="curse-name">
-            {{curse-name}}
+            {{name}}
         </p>
     </div>
 </template>
@@ -12,41 +12,8 @@
 <script>
 export default {
   name: "Curse", 
-  data: function() {
-    return{
-        products: [
-        {
-            img: "../assets/pilates.png",
-            name: "פילאטיס מזרן"
-        },
-        {
-            img: "../assets/pilates.png",
-            name: "פילאטיס מזרן"
-        },
-         {
-            img: "../assets/pilates.png",
-            name: "פילאטיס מזרן"
-        },
-         {
-            img: "../assets/pilates.png",
-            name: "פילאטיס מזרן"
-        },
-         {
-            img: "../assets/pilates.png",
-            name: "פילאטיס מזרן"
-        },
-         {
-            img: "../assets/pilates.png",
-            name: "פילאטיס מזרן"
-        }
-      ]
+  props: ['img', 'name']
   
-    }
-},
-    methods: {
-    
-    
-        }
 }
 </script>
 
