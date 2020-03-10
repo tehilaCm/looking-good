@@ -18,7 +18,7 @@
     .fling-minislide { 
     position: relative;
     overflow: hidden;
-    height: 30rem;;
+    height: 25rem;
     margin: 0;
     left: 0;
     text-align: left;
@@ -46,6 +46,13 @@
 }
 .fling-minislide img:nth-child(1){
     animation-delay:15s;
+}
+
+@media (min-width: 51rem)
+{
+ .fling-minislide { 
+    height: 30rem;
+ }
 }
 
 </style>

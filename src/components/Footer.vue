@@ -84,6 +84,7 @@ export default {
     .footer{
       display: grid;
       grid-template-columns: 50% 50%;
+      margin: 0;
     }
 
     .details{

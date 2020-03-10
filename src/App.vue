@@ -14,16 +14,16 @@
       <img :src="require('@/assets/menu.png')" class="mobile-nav-icon" @click="openMobileNav()">
       <div class="mobile-nav_items">
         <p class="close" @click="closeMobileNav()">X</p>
-        <router-link to="/about">קצת עלינו</router-link>
+        <router-link to="/">דף הבית</router-link>
         <router-link to="/">הצוות שלנו</router-link> 
-        <router-link to="/about">אימונים</router-link>
+        <router-link to="/about">קורסים</router-link>
         <router-link to="/">מערכת שעות</router-link> 
         <router-link to="/about">צור קשר</router-link>
       </div>
       <div class="nav_items">
-        <router-link to="/about">קצת עלינו</router-link>
+        <router-link to="/">דף הבית</router-link>
         <router-link to="/">הצוות שלנו</router-link> 
-        <router-link to="/about">אימונים</router-link>
+        <router-link to="/about">קורסים</router-link>
         <router-link to="/">מערכת שעות</router-link> 
         <router-link to="/about">צור קשר</router-link>
       </div> 
