@@ -28,9 +28,12 @@
     <div class="curses">
       <hr>
       <h1>קורסים</h1>
-      <Curse v-for="curse in curses" :name="curse.name" :img="curse.img" :key.sync="curse.id">
-      </Curse>
-      <!-- כפתור שאר קורסים -->
+      <div class="curses-list">
+         <Curse v-for="curse in curses" :name="curse.name" :img="curse.img" :key.sync="curse.id">
+        </Curse>
+        <!-- כפתור שאר קורסים -->
+      </div>
+     
     </div>
     <Footer></Footer>
   </div>
@@ -60,7 +63,7 @@ export default {
           },
           {
               id: "2",
-              img: "https://lh3.googleusercontent.com/proxy/ItNuMrCtUFcn-8lQcqCgW8x_j4lb46opDbg0RKda5498lGZU0EiBinbE8qEVCyuenw564izI_oFCKvn_pSsj2j0uSE02hHaYDDqvvnk2FJyuV0Qg",
+              img: "https://hydro.org.il/wp-content/uploads/2015/12/zumba.jpg",
               name: "זומבה"
           },
           {
@@ -120,10 +123,6 @@ export default {
     color: rgb(230, 24, 24);
     float: right;
     padding: 0.5rem;
-  }
-
-  .curses{
-
   }
 
   hr{

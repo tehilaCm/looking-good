@@ -134,7 +134,7 @@ export default {
 
   .logo-part-2{
     margin-top: 0.6rem;
-    font-size: 2rem;
+    font-size: 2.3rem;
     vertical-align: center;
   }
 

@@ -19,6 +19,15 @@ export default {
 
 <style scoped>
 
+.curse{
+    display: inline-block;
+    margin: 2rem;
+}
+
+img{
+    width: 20rem;
+    height: 13.5rem;
+}
   
 </style>
 

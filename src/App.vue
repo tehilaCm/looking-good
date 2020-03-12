@@ -62,7 +62,7 @@
 
 <style>
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Alef', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -83,7 +83,7 @@
     position: fixed;
     right: 0;
     z-index: -1;
-    background-color: rgb(240, 240, 228);
+    background-color: rgb(248, 240, 240);
     opacity: 0;
     transform: translateY(-3rem);
     transition: opacity 1s, transform 1s;
@@ -140,14 +140,13 @@
 
   .logo-part-2{
     margin-top: 0.6rem;
-    font-size: 2rem;
+    font-size: 2.3rem;
     vertical-align: center;
   }
 
   .logo-style{
     color: #2c3e50;
     font-weight: bold;
-    font-family: 'Lato', sans-serif;
   }
 
   .good{
