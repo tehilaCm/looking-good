@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="backdrop"></div>
    <div class="nav">
       <div class="icon">
           <img :src="require('@/assets/logo.png')">
@@ -14,18 +15,18 @@
       <img :src="require('@/assets/menu.png')" class="mobile-nav-icon" @click="openMobileNav()">
       <div class="mobile-nav_items">
         <p class="close" @click="closeMobileNav()">X</p>
-        <router-link to="/">דף הבית</router-link>
-        <router-link to="/">הצוות שלנו</router-link> 
-        <router-link to="/about">קורסים</router-link>
-        <router-link to="/">מערכת שעות</router-link> 
-        <router-link to="/about">צור קשר</router-link>
+        <router-link to="/"><span @click="closeMobileNav()">דף הבית</span></router-link>
+        <router-link to="/"><span @click="closeMobileNav()">הצוות שלנו</span></router-link> 
+        <router-link to="/curses"><span @click="closeMobileNav()">קורסים</span></router-link>
+        <router-link to="/"><span @click="closeMobileNav()">מערכת שעות</span></router-link> 
+        <router-link to="/contact"><span @click="closeMobileNav()">צור קשר</span></router-link>
       </div>
       <div class="nav_items">
         <router-link to="/">דף הבית</router-link>
         <router-link to="/">הצוות שלנו</router-link> 
-        <router-link to="/about">קורסים</router-link>
+        <router-link to="/curses">קורסים</router-link>
         <router-link to="/">מערכת שעות</router-link> 
-        <router-link to="/about">צור קשר</router-link>
+        <router-link to="/contact">צור קשר</router-link>
       </div> 
     </div>
     <router-view />
@@ -40,14 +41,18 @@
     openMobileNav: function(){
       let mobileNavItems = document.querySelector(".mobile-nav_items");
       let mobileNavIcon = document.querySelector(".mobile-nav-icon");
+      let backdrop = document.querySelector(".backdrop");
+      backdrop.style.display = "block";
       mobileNavItems.style.opacity = "1"; 
       mobileNavItems.style.trasform = "translateY(0)";
-      mobileNavItems.style.zIndex = "2"; 
+      mobileNavItems.style.zIndex = "4"; 
       mobileNavIcon.style.visibility = "hidden"
     },
      closeMobileNav: function(){
       let mobileNavItems = document.querySelector(".mobile-nav_items");
       let mobileNavIcon = document.querySelector(".mobile-nav-icon");
+      let backdrop = document.querySelector(".backdrop");
+      backdrop.style.display = "none";
       mobileNavItems.style.opacity = "0"; 
       mobileNavItems.style.zIndex = "-1"; 
       mobileNavIcon.style.visibility = "visible"
@@ -56,6 +61,9 @@
         mobileNavItems.style.zIndex = "-1"; 
       },1000);
     }
+  },
+  mounted(){
+      
   }
 }
 </script>
@@ -69,10 +77,22 @@
     color: #2c3e50;
   }
 
+  .backdrop{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+  }
+
   .nav{
     display: flex; /*grid*/
     /* grid-template-columns: 6rem 6rem; */
     width: 100%;
+    box-shadow: 15px 2px 5px grey;
   }
 
    .mobile-nav_items{

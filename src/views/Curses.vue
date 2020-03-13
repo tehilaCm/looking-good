@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="curses">
    
     <Footer></Footer>
   </div>
@@ -18,7 +18,7 @@
 </script>
 
 <style scoped>
-  .about{
+  .curses{
     /* margin-top: 10rem; */
   }
 </style>
