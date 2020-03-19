@@ -18,14 +18,14 @@
         <router-link to="/"><span @click="closeMobileNav()">דף הבית</span></router-link>
         <router-link to="/"><span @click="closeMobileNav()">הצוות שלנו</span></router-link> 
         <router-link to="/curses"><span @click="closeMobileNav()">קורסים</span></router-link>
-        <router-link to="/"><span @click="closeMobileNav()">מערכת שעות</span></router-link> 
+        <router-link to="/schedule"><span @click="closeMobileNav()">מערכת שעות</span></router-link> 
         <router-link to="/contact"><span @click="closeMobileNav()">צור קשר</span></router-link>
       </div>
       <div class="nav_items">
         <router-link to="/">דף הבית</router-link>
         <router-link to="/">הצוות שלנו</router-link> 
         <router-link to="/curses">קורסים</router-link>
-        <router-link to="/">מערכת שעות</router-link> 
+        <router-link to="/schedule">מערכת שעות</router-link> 
         <router-link to="/contact">צור קשר</router-link>
       </div> 
     </div>

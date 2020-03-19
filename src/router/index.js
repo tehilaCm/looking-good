@@ -17,10 +17,16 @@ const routes = [
       import("../views/Curses.vue"),
   },
   {
-    path: "/Contact",
+    path: "/contact",
     name: "Contact",
     component: () =>
       import("../views/Contact.vue"),
+  },
+  {
+    path: "/schedule",
+    name: "Schedule",
+    component: () =>
+      import("../views/Schedule.vue"),
   }
 ];
 
