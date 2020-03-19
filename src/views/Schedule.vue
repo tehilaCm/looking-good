@@ -10,36 +10,37 @@
                 </a>
             </div>
         </div>
-        <h2>{{this.selectedDay}}</h2>
-        <div v-if="this.selectedDay === 'ראשון'" class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeSunday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
+        <div class="schedual-details-container">
+            <h2>{{this.selectedDay}}</h2>
+            <div v-if="this.selectedDay === 'ראשון'" class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeSunday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
+            <div v-else-if="this.selectedDay === 'שני'" class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeMonday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
+            <div v-else-if="this.selectedDay === 'שלישי'" class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeTuesday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
+            <div v-else-if="this.selectedDay === 'רביעי'" class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeWednesday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
+            <div v-else-if="this.selectedDay === 'חמישי'" class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeThursday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
+            <div v-else-if="this.selectedDay === 'שישי'" class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeFriday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
+            <div v-else class="schedual-details">
+                <TrainAndTime v-for="(trainTime, index) in trainTimeSaturday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
+                </TrainAndTime>
+            </div>
         </div>
-        <!-- <div v-else-if="this.selectedDay === 'שני'" class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeMonday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
-        </div>
-        <div v-else-if="this.selectedDay === 'שלישי'" class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeTuesday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
-        </div>
-        <div v-else-if="this.selectedDay === 'רביעי'" class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeWednesday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
-        </div>
-        <div v-else-if="this.selectedDay === 'חמישי'" class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeThursday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
-        </div>
-        <div v-else-if="this.selectedDay === 'שישי'" class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeFriday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
-        </div> -->
-        <div v-else class="schedual-details">
-            <TrainAndTime v-for="(trainTime, index) in trainTimeSaturday" :train="trainTime.train" :time="trainTime.time" :key.sync="index">
-            </TrainAndTime>
-        </div>
-        
         <Footer></Footer>
     </div>
 </template>
@@ -742,6 +743,12 @@ export default {
 
     h2{
         margin: 1rem auto;
+    }
+
+    .schedual-details-container{
+        width: 90%;
+        margin: auto;
+        max-width: 30rem;
     }
 
     .schedual-details{
