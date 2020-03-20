@@ -16,14 +16,14 @@
       <div class="mobile-nav_items">
         <p class="close" @click="closeMobileNav()">X</p>
         <router-link to="/"><span @click="closeMobileNav()">דף הבית</span></router-link>
-        <router-link to="/"><span @click="closeMobileNav()">הצוות שלנו</span></router-link> 
+        <router-link to="/coaches"><span @click="closeMobileNav()">הצוות שלנו</span></router-link> 
         <router-link to="/curses"><span @click="closeMobileNav()">קורסים</span></router-link>
         <router-link to="/schedule"><span @click="closeMobileNav()">מערכת שעות</span></router-link> 
         <router-link to="/contact"><span @click="closeMobileNav()">צור קשר</span></router-link>
       </div>
       <div class="nav_items">
         <router-link to="/">דף הבית</router-link>
-        <router-link to="/">הצוות שלנו</router-link> 
+        <router-link to="/coaches">הצוות שלנו</router-link> 
         <router-link to="/curses">קורסים</router-link>
         <router-link to="/schedule">מערכת שעות</router-link> 
         <router-link to="/contact">צור קשר</router-link>
@@ -149,7 +149,7 @@
   }
 
  .logo-part-1{
-    margin: 1rem 0.5rem 1.7rem 1rem;
+    margin: 1rem 0.5rem 1.7rem 0.5rem;
     font-size: 1.2rem;
     /* grid-column-start: 1; */
   }
@@ -180,7 +180,7 @@
 
   .icon{
     vertical-align: middle;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
   }
  
   img{
@@ -192,6 +192,14 @@
 {
   .nav{
     display: flex;
+  }
+
+  .logo-part-1{
+    margin: 1rem 0.5rem 1.7rem 1rem;
+  }
+
+   .icon{
+    margin-left: 1rem;
   }
 
   .mobile-nav_items{

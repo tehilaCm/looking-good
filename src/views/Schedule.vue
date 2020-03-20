@@ -723,6 +723,7 @@ export default {
         width: 6.1rem;
         height: 4.5rem;
         margin: 0.3rem;
+        pointer-events: none;
     }
 
     .day{
@@ -730,6 +731,7 @@ export default {
         width: 4.5rem;
         padding: 0.5rem;
         margin: 0.5rem auto;
+        pointer-events: all;
     }
 
     a{

@@ -3,8 +3,7 @@
         <div class="contact-form">
             <h1>דברו איתנו</h1>
             <form action="" method="get">
-                <input type="text" name="name" placeholder="שם פרטי" required>
-                <input type="text" name="last-name" placeholder="משפחה">
+                <input type="text" name="full-name" placeholder="שם מלא">
                 <input type="text" name="phone" placeholder="טלפון" required>
                 <input type="email" name="email" placeholder="אימייל">
                 <textarea id="w3mission" rows="4" cols="50" placeholder="הודעה"></textarea>
@@ -35,7 +34,7 @@ export default {
     .contact-form{
         width: fit-content;
         margin: auto;
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
 
     h1{
@@ -83,10 +82,9 @@ export default {
         width: 15rem;
     }
 
-    textarea, input[type="submit"]{
+    textarea, input[type="submit"], input[name="full-name"]{
         width: 31rem;
     } 
-    
 }
   
 </style>
