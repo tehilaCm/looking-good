@@ -13,7 +13,6 @@
 export default {
   name: "Curse", 
   props: ['img', 'name']
-  
 }
 </script>
 

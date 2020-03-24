@@ -3,14 +3,6 @@
         <div class="coach-img">
             <figure><img :src="img"></figure>
         </div>
-
-        <!-- <figure class="imghvr-fade">
-        <img :src="img">
-        <figcaption>
-            // Hover Content
-        </figcaption>
-        </figure> -->
-
         <div class="coach-details">
             <h2 class="name">{{name}}</h2>
             <p class="description">{{description}}</p>
@@ -47,53 +39,16 @@ export default {
         font-size: 2rem;
     }
 
-    .coach-img figure {
-        position: relative;
+        /* Gray Scale */
+    .coach-img figure img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
-    .coach-img figure::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 2;
-        display: block;
-        content: '';
-        width: 0;
-        height: 0;
-        background: rgba(255,255,255,.2);
-        border-radius: 100%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        opacity: 0;
-    }
-    .coach-img figure:hover::before {
-        -webkit-animation: circle .75s;
-        animation: circle .75s;
-    }
-    @-webkit-keyframes circle {
-        0% {
-            opacity: 1;
-        }
-        40% {
-            opacity: 1;
-        }
-        100% {
-            width: 200%;
-            height: 200%;
-            opacity: 0;
-        }
-    }
-    @keyframes circle {
-        0% {
-            opacity: 1;
-        }
-        40% {
-            opacity: 1;
-        }
-        100% {
-            width: 200%;
-            height: 200%;
-            opacity: 0;
-        }
+    .coach-img figure:hover img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
     }
 
     @media (min-width: 51rem)
