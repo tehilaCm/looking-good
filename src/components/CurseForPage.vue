@@ -1,7 +1,7 @@
 <template>
     <div>
         <figure class="imghvr-flip-diag-2">
-            <img :src="img">
+            <img :src="getSrc(img)">
             <figcaption>
                 <h1 class="name">{{name}}</h1>
                 <p class="description">{{description}}</p>
@@ -13,7 +13,13 @@
 <script>
 export default {
     name: "CurseForPage", 
-    props: ['img', 'name', 'description']
+    props: ['img', 'name', 'description'],
+    methods: {
+        getSrc(name) {
+            var images = require.context('../assets/', false, /\.jpg$/);
+            return images('./' + name + ".jpg")
+        }
+    }
 }
 </script>
 

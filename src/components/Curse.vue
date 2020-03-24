@@ -1,7 +1,7 @@
 <template>
     <div class="curse">
         <div class="curse-img">
-            <img :src="img">
+            <img :src="getSrc(img)">
         </div>
         <p class="curse-name">
             {{name}}
@@ -12,7 +12,13 @@
 <script>
 export default {
   name: "Curse", 
-  props: ['img', 'name']
+  props: ['img', 'name'],
+  methods: {
+        getSrc(name) {
+            var images = require.context('../assets/', false, /\.jpg$/);
+            return images('./' + name + ".jpg")
+        }
+    }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="coach">
         <div class="coach-img">
-            <figure><img :src="img"></figure>
+            <figure><img :src="getSrc(img)"></figure>
         </div>
         <div class="coach-details">
             <h2 class="name">{{name}}</h2>
@@ -14,8 +14,14 @@
 <script>
 export default {
     name: "Coach",
-    props: ['img', 'name', 'description']
-};
+    props: ['img', 'name', 'description'],
+    methods: {
+        getSrc(name) {
+            var images = require.context('../assets/', false, /\.jpg$/);
+            return images('./' + name + ".jpg");
+        }
+    }
+}
 </script>
 
 <style scoped>
