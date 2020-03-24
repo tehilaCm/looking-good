@@ -43,6 +43,14 @@ export default {
         padding: 1rem;
     }
 
+    h1{
+        font-size: 2.5rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+    }
+
     @media (min-width: 33rem)
     {
         div{
