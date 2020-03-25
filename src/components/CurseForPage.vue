@@ -25,6 +25,10 @@ export default {
 
 <style scoped>
 
+    div{
+        margin: 0.1rem auto;
+    }
+
     img{
         width: 100%;
         height: 15rem;
