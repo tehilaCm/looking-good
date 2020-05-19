@@ -48,7 +48,7 @@
     animation-delay:15s;
 }
 
-@media (min-width: 51rem)
+@media (min-width: 52rem)
 {
  .fling-minislide { 
     height: 30rem;

@@ -79,7 +79,7 @@ export default {
     cursor: pointer;
   }
 
-  @media (min-width: 51rem)
+  @media (min-width: 52rem)
   {
     .footer{
       display: grid;

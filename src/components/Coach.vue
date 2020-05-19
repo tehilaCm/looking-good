@@ -39,13 +39,13 @@ export default {
 
     .coach-details{
         width: 17rem;
+        margin: auto;
     }
 
     h2{
         font-size: 2rem;
     }
 
-        /* Gray Scale */
     .coach-img figure img {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
@@ -57,7 +57,7 @@ export default {
         filter: grayscale(0);
     }
 
-    @media (min-width: 51rem)
+    @media (min-width: 52rem)
     {
         .coach{
             margin: 2rem 3.5rem;
@@ -70,6 +70,10 @@ export default {
 
         .coach-details{
             width: 17rem;
+        }
+
+        .description{
+            font-size: 1.1rem;
         }
     }
 

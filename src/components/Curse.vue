@@ -33,6 +33,10 @@ img{
     width: 20rem;
     height: 13.5rem;
 }
+
+p{
+    font-size: 1.1rem;
+}
   
 </style>
 

@@ -751,12 +751,13 @@ export default {
         width: 90%;
         margin: auto;
         max-width: 30rem;
+        min-height: 100vh;
     }
 
     .schedual-details{
         margin: 2rem auto 4rem auto;
     }
-    @media (min-width: 51rem)
+    @media (min-width: 52rem)
     {
         .frame-day{
             border: 0.5rem solid #2c3e50;
@@ -770,6 +771,10 @@ export default {
             width: 5rem;
             padding: 0.5rem;
             margin: 0.5rem auto;
+        }
+
+        .schedual-details-container{
+            margin: 0 auto 3rem auto;
         }
     }
 

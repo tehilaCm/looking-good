@@ -70,7 +70,7 @@ export default {
         font-family: 'Alef', sans-serif;
     }
 
-@media (min-width: 51rem)
+@media (min-width: 52rem)
 {
     form{
         max-width: 35rem;

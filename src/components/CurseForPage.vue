@@ -83,7 +83,7 @@ export default {
         }
     }
 
-    @media(min-width: 51rem)
+    @media(min-width: 52rem)
     {
         div{
             width: 45%;

@@ -89,8 +89,7 @@
   }
 
   .nav{
-    display: flex; /*grid*/
-    /* grid-template-columns: 6rem 6rem; */
+    display: flex; 
     width: 100%;
     box-shadow: 15px 2px 5px grey;
   }
@@ -151,7 +150,6 @@
  .logo-part-1{
     margin: 1rem 0.5rem 1.7rem 0.5rem;
     font-size: 1.2rem;
-    /* grid-column-start: 1; */
   }
 
   .logo-part-1 p{
@@ -188,7 +186,7 @@
     margin-top: 0.5rem;
   }
 
-@media (min-width: 51rem)
+@media (min-width: 52rem)
 {
   .nav{
     display: flex;
@@ -215,6 +213,7 @@
 
   .nav_items a {
     font-weight: bold;
+    font-size: 1.1rem;
     color: #2c3e50;
     margin: 0 1rem;
     text-decoration: none;
